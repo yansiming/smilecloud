@@ -1,0 +1,23 @@
+﻿#mongodb1 uri1 是pnr库
+spring:
+  application:
+    name: smile-cloud-service-taoBLMeng
+  thymeleaf:
+     mode: HTML
+     encoding: UTF-8
+     prefix: classpath:/templates/            # 静态页面所在的路径，一般在resources文件加下创建
+     suffix: .html
+
+  data:
+    mysql:
+      uri1: jdbc:mysql://localhost:3306/smileService?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+      username: root
+      password: root
+server:
+  port: 10339
+
+taokeApi:
+  appKey: 60d14d3d3f106
+  appSecret: 79eac74954cd3fc4032a9087a9229351
+
+  

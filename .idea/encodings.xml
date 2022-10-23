@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/smile-cloud-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/smile-cloud-service/smile-cloud-service-taoBLMeng" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/smile-cloud-service/smile-cloud-service-taoBLMeng/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/smile-cloud-service/smile-cloud-service-taoBLMeng/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/smile-cloud-service/smile-clould-service-weChat" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/smile-cloud-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/smile-cloud-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/smile-cloud-service/weChat" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
