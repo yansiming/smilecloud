@@ -57,7 +57,13 @@ public class CommodityReadExeclServiceImol implements CommodityReadExeclService 
             bountyPrice = commission*50/100;
         }
 //               String bountyPriceStr =new DecimalFormat("0.00").format(bountyPrice);
-        return String.valueOf(new BigDecimal(bountyPrice).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue());
+        //奖励金
+        double v = new BigDecimal(bountyPrice).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+        //预计到手价
+        double v1 = Double.parseDouble(price) - v;
+        String s = String.valueOf(v);
+        String s1 = String.valueOf(v1);
+        return "奖励金: "+s+"  "+"预计到手价"+s1;
     }
 
     /**
