@@ -50,7 +50,7 @@ public class CommodityReadExeclServiceImol implements CommodityReadExeclService 
             int rowNums=sheet.getRows();//得到所有的行
 
             System.out.println("表的列数："+columnNums+" 表的行数:"+rowNums);
-            for (int rowNum = 1; rowNum < rowNums; rowNum++) {
+            for (int rowNum = rowNums; rowNum > 0; rowNum--) {
                 for (int columnNum= 0; columnNum < columnNums; columnNum++) {
                     //第一个是列数，第二个是行数
                     Commodity commodity = new Commodity();
