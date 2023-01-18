@@ -22,4 +22,5 @@ public class TaoKeApiController {
     private String getTaoPassword(@RequestParam("taoPassword") String taoPassword){
         return  taoKeApiService.getTaoPassword(taoPassword);
     }
+
 }

@@ -34,6 +34,32 @@ public class CommodityReadExeclServiceImol implements CommodityReadExeclService 
         List<Item> items = getAllByExcel(execlName);
         return items;
     }
+
+    @Override
+    public String getBountyPriceStr(String commissionStr) {
+        Double commission = Double.parseDouble(commissionStr);
+        Double bountyPrice = 0.00;
+        if(commission<=1){
+            bountyPrice = commission*78/100;
+        }else if(commission>1 && commission<=3){
+            bountyPrice = commission*75/100;
+        }else if(commission>3 && commission<=6){
+            bountyPrice = commission*73/100;
+        }else if(commission>6 && commission<=10){
+            bountyPrice = commission*55/100;
+        }else if(commission>10 && commission<=30){
+            bountyPrice = commission*50/100;
+        }else if(commission>30 && commission<=60){
+            bountyPrice = commission*50/100;
+        }else if(commission>60 && commission<=100){
+            bountyPrice = commission*50/100;
+        }else if(commission>100 && commission<=500){
+            bountyPrice = commission*50/100;
+        }
+//               String bountyPriceStr =new DecimalFormat("0.00").format(bountyPrice);
+        return String.valueOf(new BigDecimal(bountyPrice).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue());
+    }
+
     /**
      * 读取execl文件内容
      * @param execlName 文件名
@@ -50,7 +76,7 @@ public class CommodityReadExeclServiceImol implements CommodityReadExeclService 
             int rowNums=sheet.getRows();//得到所有的行
 
             System.out.println("表的列数："+columnNums+" 表的行数:"+rowNums);
-            for (int rowNum = rowNums; rowNum > 0; rowNum--) {
+            for (int rowNum = 1; rowNum < rowNums; rowNum++) {
                 for (int columnNum= 0; columnNum < columnNums; columnNum++) {
                     //第一个是列数，第二个是行数
                     Commodity commodity = new Commodity();
