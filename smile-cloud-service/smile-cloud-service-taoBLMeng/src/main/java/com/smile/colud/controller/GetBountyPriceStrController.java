@@ -19,7 +19,7 @@ public class GetBountyPriceStrController {
      * 输入佣金计算出奖励金
      */
     @GetMapping("/getBountyPriceStr")
-    private String getBountyPriceStr(@RequestParam("commissionStr") String commissionStr){
-        return  ommodityReadExeclService.getBountyPriceStr(commissionStr);
+    private String getBountyPriceStr(@RequestParam("price") String price,@RequestParam("incomeRatio") String incomeRatio){
+        return  ommodityReadExeclService.getBountyPriceStr(price,incomeRatio);
     }
 }

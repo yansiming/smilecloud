@@ -36,8 +36,8 @@ public class CommodityReadExeclServiceImol implements CommodityReadExeclService 
     }
 
     @Override
-    public String getBountyPriceStr(String commissionStr) {
-        Double commission = Double.parseDouble(commissionStr);
+    public String getBountyPriceStr(String price,String incomeRatio) {
+        double commission = Double.parseDouble(price) * Double.parseDouble(incomeRatio) * 0.01;
         Double bountyPrice = 0.00;
         if(commission<=1){
             bountyPrice = commission*78/100;

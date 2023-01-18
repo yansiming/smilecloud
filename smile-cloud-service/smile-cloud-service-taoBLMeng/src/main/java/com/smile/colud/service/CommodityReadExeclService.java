@@ -12,5 +12,5 @@ import java.util.List;
 public interface CommodityReadExeclService {
      List<Item> commodityReadExecl(String execlName);
 
-     String getBountyPriceStr(String commissionStr);
+     String getBountyPriceStr(String price,String incomeRatio);
 }
